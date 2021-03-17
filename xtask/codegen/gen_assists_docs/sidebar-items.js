@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["generate_assists_docs",""],["generate_assists_tests",""],["generate_tests",""],["hide_hash_comments",""],["reveal_hash_comments",""]],"struct":[["Assist",""]]});

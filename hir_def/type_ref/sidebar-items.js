@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Mutability",""],["Rawness",""],["TypeBound",""],["TypeRef","Compare ty::Ty"]],"struct":[["LifetimeRef",""]]});

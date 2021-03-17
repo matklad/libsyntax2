@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `fixture` mod in crate `base_db`."><meta name="keywords" content="rust, rustlang, rust-lang, fixture"><title>base_db::fixture - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled ><script id="default-settings"></script><script src="../../storage.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../../base_db/index.html'><div class='logo-container rust-logo'><img src='../../rust-logo.png' alt='logo'></div></a><p class="location">Module fixture</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#constants">Constants</a></li><li><a href="#traits">Traits</a></li></ul></div><p class="location"><a href="../index.html">base_db</a></p><script>window.sidebarCurrent = {name: "fixture", ty: "mod", relpath: "../"};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices" role="menu"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" class="help-button">?</button>
+                <a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class="fqn"><span class="out-of-band"><span id="render-detail"><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class="inner">&#x2212;</span>]</a></span><a class="srclink" href="../../src/base_db/fixture.rs.html#1-260" title="goto source code">[src]</a></span><span class="in-band">Module <a href="../index.html">base_db</a>::<wbr><a class="mod" href="">fixture</a></span></h1><div class="docblock"><p>Fixtures are strings containing rust source code with optional metadata.
+A fixture without metadata is parsed into a single source file.
+Use this to test functionality local to one file.</p>
+<p>Simple Example:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="string">r#&quot;
+fn main() {
+    println!(&quot;Hello World&quot;)
+}
+&quot;#</span></pre></div>
+<p>Metadata can be added to a fixture after a <code>//-</code> comment.
+The basic form is specifying filenames,
+which is also how to define multiple files in a single test fixture</p>
+<p>Example using two files in the same crate:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="string">&quot;
+//- /main.rs
+mod foo;
+fn main() {
+    foo::bar();
+}
+
+//- /foo.rs
+pub fn bar() {}
+&quot;</span></pre></div>
+<p>Example using two crates with one file each, with one crate depending on the other:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="string">r#&quot;
+//- /main.rs crate:a deps:b
+fn main() {
+    b::foo();
+}
+//- /lib.rs crate:b
+pub fn b() {
+    println!(&quot;Hello World&quot;)
+}
+&quot;#</span></pre></div>
+<p>Metadata allows specifying all settings and variables
+that are available in a real rust project:</p>
+<ul>
+<li>crate names via <code>crate:cratename</code></li>
+<li>dependencies via <code>deps:dep1,dep2</code></li>
+<li>configuration settings via <code>cfg:dbg=false,opt_level=2</code></li>
+<li>environment variables via <code>env:PATH=/bin,RUST_LOG=debug</code></li>
+</ul>
+<p>Example using all available metadata:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered">
+<span class="string">&quot;
+//- /lib.rs crate:foo deps:bar,baz cfg:foo=a,bar=b env:OUTDIR=path/to,OTHER=foo
+fn insert_source_code_here() {}
+&quot;</span></pre></div>
+</div><h2 id="structs" class="section-header"><a href="#structs">Structs</a></h2>
+<table><tr class="module-item"><td><a class="struct" href="struct.ChangeFixture.html" title="base_db::fixture::ChangeFixture struct">ChangeFixture</a></td><td class="docblock-short"></td></tr></table><h2 id="constants" class="section-header"><a href="#constants">Constants</a></h2>
+<table><tr class="module-item"><td><a class="constant" href="constant.WORKSPACE.html" title="base_db::fixture::WORKSPACE constant">WORKSPACE</a></td><td class="docblock-short"></td></tr></table><h2 id="traits" class="section-header"><a href="#traits">Traits</a></h2>
+<table><tr class="module-item"><td><a class="trait" href="trait.WithFixture.html" title="base_db::fixture::WithFixture trait">WithFixture</a></td><td class="docblock-short"></td></tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><script>window.rootPath = "../../";window.currentCrate = "base_db";</script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

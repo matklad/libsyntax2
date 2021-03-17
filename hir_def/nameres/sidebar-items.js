@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ModuleOrigin",""],["ModuleSource",""]],"struct":[["DefMap","Contains the results of (early) name resolution."],["ModuleData",""]]});

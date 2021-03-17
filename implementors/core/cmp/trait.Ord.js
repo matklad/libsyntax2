@@ -1,0 +1,17 @@
+(function() {var implementors = {};
+implementors["base_db"] = [{"text":"impl Ord for SourceRootId","synthetic":false,"types":[]},{"text":"impl Ord for CrateId","synthetic":false,"types":[]},{"text":"impl Ord for Edition","synthetic":false,"types":[]}];
+implementors["cfg"] = [{"text":"impl Ord for CfgAtom","synthetic":false,"types":[]}];
+implementors["hir_def"] = [{"text":"impl Ord for ModPath","synthetic":false,"types":[]},{"text":"impl Ord for PathKind","synthetic":false,"types":[]},{"text":"impl Ord for BuiltinInt","synthetic":false,"types":[]},{"text":"impl Ord for BuiltinUint","synthetic":false,"types":[]},{"text":"impl Ord for BuiltinFloat","synthetic":false,"types":[]},{"text":"impl Ord for StructId","synthetic":false,"types":[]},{"text":"impl Ord for UnionId","synthetic":false,"types":[]},{"text":"impl Ord for EnumId","synthetic":false,"types":[]},{"text":"impl Ord for ImplId","synthetic":false,"types":[]},{"text":"impl Ord for BlockId","synthetic":false,"types":[]},{"text":"impl Ord for AdtId","synthetic":false,"types":[]}];
+implementors["hir_expand"] = [{"text":"impl Ord for Name","synthetic":false,"types":[]}];
+implementors["hir_ty"] = [{"text":"impl Ord for Interner","synthetic":false,"types":[]},{"text":"impl Ord for InternedCallableDefId","synthetic":false,"types":[]}];
+implementors["ide"] = [{"text":"impl Ord for StructureNodeKind","synthetic":false,"types":[]},{"text":"impl Ord for Highlight","synthetic":false,"types":[]},{"text":"impl Ord for HlMods","synthetic":false,"types":[]},{"text":"impl Ord for HlTag","synthetic":false,"types":[]},{"text":"impl Ord for HlMod","synthetic":false,"types":[]},{"text":"impl Ord for HlPunct","synthetic":false,"types":[]}];
+implementors["ide_completion"] = [{"text":"impl Ord for CompletionRelevance","synthetic":false,"types":[]}];
+implementors["ide_db"] = [{"text":"impl Ord for SymbolKind","synthetic":false,"types":[]}];
+implementors["la_arena"] = [{"text":"impl&lt;IDX:&nbsp;Ord, V:&nbsp;Ord&gt; Ord for ArenaMap&lt;IDX, V&gt;","synthetic":false,"types":[]},{"text":"impl Ord for RawIdx","synthetic":false,"types":[]}];
+implementors["parser"] = [{"text":"impl Ord for SyntaxKind","synthetic":false,"types":[]}];
+implementors["paths"] = [{"text":"impl Ord for AbsPathBuf","synthetic":false,"types":[]},{"text":"impl Ord for AbsPath","synthetic":false,"types":[]},{"text":"impl Ord for RelPathBuf","synthetic":false,"types":[]},{"text":"impl Ord for RelPath","synthetic":false,"types":[]}];
+implementors["profile"] = [{"text":"impl Ord for Bytes","synthetic":false,"types":[]}];
+implementors["project_model"] = [{"text":"impl Ord for ProjectManifest","synthetic":false,"types":[]}];
+implementors["syntax"] = [{"text":"impl Ord for Token","synthetic":false,"types":[]}];
+implementors["vfs"] = [{"text":"impl Ord for VfsPath","synthetic":false,"types":[]},{"text":"impl Ord for FileId","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

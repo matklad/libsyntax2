@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["BUILTIN_ATTRIBUTES","Attributes that have a special meaning to rustc or rustdoc."],["TOOL_MODULES","Ignored attribute namespaces used by tools."]]});

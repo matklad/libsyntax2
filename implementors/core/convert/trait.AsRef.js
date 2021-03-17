@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["paths"] = [{"text":"impl AsRef&lt;Path&gt; for AbsPathBuf","synthetic":false,"types":[]},{"text":"impl AsRef&lt;AbsPath&gt; for AbsPathBuf","synthetic":false,"types":[]},{"text":"impl AsRef&lt;Path&gt; for AbsPath","synthetic":false,"types":[]},{"text":"impl AsRef&lt;Path&gt; for RelPathBuf","synthetic":false,"types":[]},{"text":"impl AsRef&lt;Path&gt; for RelPath","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

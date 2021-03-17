@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["apply",""]],"struct":[["QualifyPaths",""],["SubstituteTypeParams",""]],"trait":[["AstTransform","`AstTransform` helps with applying bulk transformations to syntax nodes."]]});

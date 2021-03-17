@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["ide_db"] = [{"text":"impl Upcast&lt;dyn AstDatabase + 'static&gt; for RootDatabase","synthetic":false,"types":[]},{"text":"impl Upcast&lt;dyn DefDatabase + 'static&gt; for RootDatabase","synthetic":false,"types":[]},{"text":"impl Upcast&lt;dyn HirDatabase + 'static&gt; for RootDatabase","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

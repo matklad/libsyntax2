@@ -1,0 +1,1 @@
+initSidebarItems({"attr":[["attribute_macro",""]],"derive":[["DummyTrait",""]],"macro":[["function_like_macro",""]]});
